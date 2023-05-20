@@ -13,7 +13,7 @@ const Layout = () => {
                 <Sidebar />
                 <Navbar />
             </Box>
-            <Box paddingLeft={isNonMobile ? '250px' : ''} width="100%">
+            <Box marginTop={"70px"} marginLeft={isNonMobile ? "240px" : "0px"} width={ isNonMobile ? `calc(100% - ${240}px)` : "100%"} height="100%" bgcolor="red">
                 <Outlet />
             </Box>
         </>
