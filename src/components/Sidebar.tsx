@@ -11,7 +11,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import Toolbar from "@mui/material/Toolbar";
-import { Outlet } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -33,7 +32,17 @@ export default function Sidebar(props: Props) {
 
   const drawer = (
     <div>
-      <Toolbar />
+      <Box
+        sx={{
+          padding: "20px",
+          fontWeight: "700",
+          fontSize: "23.2px",
+          lineHeight: "120%",
+          letterSpacing: "-0.29px",
+        }}
+      >
+        Hiphonic
+      </Box>
       <Divider />
       <List>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
@@ -67,7 +76,7 @@ export default function Sidebar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", backgroundColor: "red" }}>
       <CssBaseline />
 
       <Box
